@@ -4,25 +4,45 @@ function mainFunction()
     let employeeName=prompt("Enter the employee Name: ");
     let department=prompt("Enter the department: ");
     let hours=Number(prompt("Enter how many hours did the employee work? "));
+    for (;isFinite(hours)!=true;)
+    {
+        window.alert("Invalid Enter: please enter a Number");
+        hours=Number(prompt("Pls Enter how many hours did the employee work? "));
+    }
     let employeeCode=prompt("Enter the employee type code: ");
     let grossSalary;
     let netPaySalary;
     let deductionSalary;
 
+    
+    for (;employeeCode!="F"&&employeeCode!="f"&&employeeCode!="r"&&employeeCode!="R";)
+    {
+        window.alert("Invalid Enter: please enter valid code");
+        employeeCode=prompt("Enter the employee type code: ");
+    }
+     
     if (employeeCode=="F"||employeeCode=="f")
-    {
-        let facultyQualificationCode=prompt("Enter the qualification code: ");
-        grossSalary=faculty(facultyQualificationCode,hours);
-    }
-    else if (employeeCode=="R"||employeeCode=="r")
-    {
-        let fixGrossSalary=Number(prompt("Enter the fixed gross salary: "));
+        {
+            let facultyQualificationCode=prompt("Enter the qualification code: ");
+                for (;isFinite(facultyQualificationCode)!=true;)
+                {
+                    window.alert("Invalid Enter: please enter a code");
+                    facultyQualificationCode=prompt("Pls Enter the qualification code: ");
+                }
+                
+            grossSalary=faculty(facultyQualificationCode,hours);
+        }
+    else (employeeCode=="R"||employeeCode=="r")
+        {
+            let fixGrossSalary=Number(prompt("Enter the fixed gross salary: "));
+            for (;isFinite(fixGrossSalary)!=true;)
+            {   
+                window.alert("Invalid Enter: please enter a Number");
+                fixGrossSalary=Number(prompt("Enter the fixed gross salary: "));
+            }
         grossSalary=regularSalary(fixGrossSalary,hours);
-    }
-    else
-    {
-        console.log("Error prompt");
-    }
+    }        
+   
     deductionSalary=deduction(grossSalary);
     netPaySalary=netPay(deductionSalary,grossSalary);
     console.log("Employee name is "+employeeName+", "+" id ["+employeeNumber+"], department is "+department+", worked for "+hours+"h, "
