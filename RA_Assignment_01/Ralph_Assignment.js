@@ -3,7 +3,7 @@ function mainFunction()
     let employeeNumber=prompt ("Enter the employee Number:");
     let employeeName=prompt("Enter the employee Name: ");
     let department=prompt("Enter the department: ");
-    let hours=prompt("Enter how many hours did the employee work? ");
+    let hours=Number(prompt("Enter how many hours did the employee work? "));
     let employeeCode=prompt("Enter the employee type code: ");
     let grossSalary;
     let netPaySalary;
@@ -11,12 +11,12 @@ function mainFunction()
 
     if (employeeCode=="F"||employeeCode=="f")
     {
-        let facultyQualificationCode=prompt("Enter the qualification code: ");
+        let facultyQualificationCode=Number(prompt("Enter the qualification code: "));
         grossSalary=faculty(facultyQualificationCode,hours);
     }
     else if (employeeCode=="R"||employeeCode=="r")
     {
-        let fixGrossSalary=prompt("Enter the fixed gross salary: ");
+        let fixGrossSalary=Number(prompt("Enter the fixed gross salary: "));
         grossSalary=regularSalary(fixGrossSalary,hours);
     }
     else
