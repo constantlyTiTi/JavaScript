@@ -40,7 +40,7 @@ function regularSalary(fixGrossSalary,actualWorkHours)
     {
         actualGrossSalary= ratePay*actualWorkHours;
     }
-    else if (actualWorkHours=clockHours)
+    else if (actualWorkHours==clockHours)
     {
         actualGrossSalary=fixGrossSalary;
     }
@@ -59,11 +59,11 @@ function faculty(facultyQualificationCode,actualWorkHours)
     const bachelorPayRate=100;
     const bachelorTeachAllowce=600;
 
-    if (facultyQualificationCode=="M")
+    if (facultyQualificationCode=="M"||facultyQualificationCode=="m")
     {
         actualGrossSalary=masterPayRate*actualWorkHours+masterTeachAllownce;
     }
-    else if (facultyQualificationCode=="B")
+    else if (facultyQualificationCode=="B"||facultyQualificationCode=="b")
     {
         actualGrossSalary=bachelorPayRate*actualWorkHours+bachelorTeachAllowce;
     }
