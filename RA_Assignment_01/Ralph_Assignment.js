@@ -21,10 +21,10 @@ function mainFunction()
         employeeCode=prompt("Enter the employee type code: ");
     }
      
-    if (employeeCode=="F"||employeeCode=="f")
+    if (employeeCode.toLowerCase()=="f")
         {
             let facultyQualificationCode=prompt("Enter the qualification code: ");
-                for (;isFinite(facultyQualificationCode)!=true;)
+                for (;isFinite(Number(facultyQualificationCode))!=false;)
                 {
                     window.alert("Invalid Enter: please enter a code");
                     facultyQualificationCode=prompt("Pls Enter the qualification code: ");
