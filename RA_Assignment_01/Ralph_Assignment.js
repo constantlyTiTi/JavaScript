@@ -80,7 +80,6 @@ function deduction(actualGrossSalary)
     const taxRate=0.25;
     if (actualGrossSalary<=taxFree)
     {
-        netPay=actualGrossSalary;
         deduction=lowHealthInsur;
     }
     else
