@@ -11,7 +11,7 @@ function mainFunction()
 
     if (employeeCode=="F"||employeeCode=="f")
     {
-        let facultyQualificationCode=Number(prompt("Enter the qualification code: "));
+        let facultyQualificationCode=prompt("Enter the qualification code: ");
         grossSalary=faculty(facultyQualificationCode,hours);
     }
     else if (employeeCode=="R"||employeeCode=="r")
@@ -54,10 +54,10 @@ function regularSalary(fixGrossSalary,actualWorkHours)
 function faculty(facultyQualificationCode,actualWorkHours)
 {
     let actualGrossSalary;
-    const masterPayRate=175;
-    const masterTeachAllownce=1500
-    const bachelorPayRate=100;
-    const bachelorTeachAllowce=600;
+    const masterPayRate=175.00;
+    const masterTeachAllownce=1500.00
+    const bachelorPayRate=100.00;
+    const bachelorTeachAllowce=600.00;
 
     if (facultyQualificationCode=="M"||facultyQualificationCode=="m")
     {
