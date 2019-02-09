@@ -32,7 +32,7 @@ function mainFunction()
                 
             grossSalary=faculty(facultyQualificationCode,hours);
         }
-    else (employeeCode=="R"||employeeCode=="r")
+    else (employeeCode.toLowerCase()=="r")
         {
             let fixGrossSalary=Number(prompt("Enter the fixed gross salary: "));
             for (;isFinite(fixGrossSalary)!=true;)
