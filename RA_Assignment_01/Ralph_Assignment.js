@@ -81,6 +81,7 @@ function deduction(actualGrossSalary)
     if (actualGrossSalary<=taxFree)
     {
         netPay=actualGrossSalary;
+        deduction=lowHealthInsur;
     }
     else
     {
