@@ -1,0 +1,185 @@
+.bodyClass
+{
+    width: 980px;
+    height:550px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: Verdana;
+    background-image: url(images/movement-for-movement-body.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.headerClass
+{
+    height:120px;
+    width:980px;
+    display: block;
+}
+.subBodyClass
+{
+    height:905px;
+    padding-top:10px;
+}
+#imgSpan
+{
+    width:300px;
+    height:120px;
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+}
+.imageClass
+{
+    width:300px;
+    height:120px;
+}
+.buttonDivClass
+{
+    width:200px;
+    height:35px;
+    margin-right:auto;
+    margin-left:auto;
+    padding-top:15px;
+}
+fieldset
+{
+    border:none;
+    padding-top:10px;
+}
+form
+{
+    width:750px;
+    height:600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.colorLightBule
+{
+    background-color: bisque;
+}
+.colorMetric{
+    background-color:rgb(255,239,213);
+}
+.colorImperial{
+    background-color: rgb(250,250,210);
+}
+.colorBisque{
+    background-color: bisque;
+}
+#ImperialCalculatorSpecific
+{
+    display: none;
+}
+.tabHeightWidth
+{
+    height:30px;
+    width: 200px;
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 20px;
+    box-shadow: 2px 0px 0px 0px #888888;
+    border-radius: 0px 20px 0px 0px;
+}
+.bodyDivClass
+{
+    padding-top:20px;
+    border-radius: 0px 20px 20px 20px;
+    box-shadow: 2px 2px 2px #888888;
+}
+#activityFieldset
+{
+    display:none;
+}
+#intakeDisplay
+{
+    display: none;
+    position: absolute;
+}
+.addTabHoverClass
+{
+    background-color:rgb(128,128,128);
+}
+.addTabAfterClickClassMetric
+{
+    background-color:rgb(202, 189, 167);
+}
+.addTabAfterClickClassImperial
+{
+    background-color:  rgb(206, 206, 171);
+}
+.imperialTabClass
+{
+    background-color: rgb(236, 236, 173);
+}
+.lowerSpanCommonClass
+{
+    height:100px;
+    width: 200px;
+}
+.outputSpanClass
+{
+    display: inline-block;
+    position: relative;
+}
+.caloriesText
+{
+    font-size: 1.4em;
+    font-style: italic;
+    color: red;
+}
+.intakeText
+{
+    font-size: 1.4em;
+    font-style: italic;
+    color: rgb(153, 0, 255); 
+}
+.lowerOutPutClass
+{
+    height:120px;
+    padding-top:10px;
+    display: block;
+}
+.outputClass
+{
+    height: 50px;
+    border-style: inset;
+    border-width: 3px;
+    border-color:white;
+    text-align: center;
+    font-size: 1.2em;
+    padding-top:20px;
+}
+.intakeDisplayClass
+{
+    padding-left:30px;
+}
+.lowImageClass
+{
+    width: 100%;
+    height:100%;
+}
+.lowImageSpanClass
+{
+    overflow: visible;
+    display: block;
+    height: 407px;
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.labelClass
+{
+    height:30px;
+    width: 70px;
+    display: inline-block;
+}
+.activityLableClass
+{
+    height: 30px;
+    width: 300px;
+    display: block;
+}
+.tabHeightWidth:hover
+{
+    background-color: rgba(245, 245, 220, 0.801);
+}

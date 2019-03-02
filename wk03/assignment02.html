@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    
+    <link rel="stylesheet" href="assignment02.css" >
+    <meta charset="ult-8">
+    <title>Assignment 02</title>
+    <link rel="icon" href="image/icon.png" type="image/x-icon">
+</head>
+<body class="bodyClass">
+    <div class="bodyTrans">
+    <div class="headbackgroundDivClass">
+    <div class="HeadDivClass">
+        <b>Assignment 2 -- JavaScript Table</b>
+    </div>
+</div>
+    <div class="subBodyClass">
+        <div class="subUpperDiv">
+            <span class="tableSpan">
+                <div id="tableInputDiv" class="tableInputDivClass">
+                        <div class="QuestionDiv">How Many Rows? :&nbsp;<input id="tableRowInput"type="number" min=0></div>
+                        <div class="QuestionDiv">How Many Columns? :&nbsp;<input id="tableColInput"type="number"min=0></div>
+                        <div class="QuestionDiv">Enter a Title :&nbsp;<input id="tableTitleInput"></div>
+                </div>
+                <div id="clickDiv" class="clickDivClass">
+                        Click Here To Create Table
+                </div>
+            </span>
+            <span class="tableSpan">
+                <div id="locationText" class="QuestionDiv"> Which cell do you want to change: </div>
+                <span id="rolChangeSpan" class="QuestionDiv">Row: <input id="rolChange" type="number"min=0></span>
+                <span id="ColChangeSpan" class="QuestionDiv">Col: <input id="colChange" type="number"min=0></span>
+                <div id="ClickValueInsert" class="QuestionDiv">
+                        Enter the Text you want to update: <input id="valueInsertInput">
+                </div>
+                <div id="ChangeDiv" class="clickDivClass" > 
+                    Click to change Text
+                </div>
+            </span>
+        </div>
+    <div class="TableShowText"> <em>Table Will be Shown Here</em></div>
+    <div id="tableShowDiv" class="tableShowDivClass">
+
+    </div>
+</div>
+</div>
+<footer>
+        Copyright&nbsp;&copy;&nbsp;By&nbsp;Ting Li-Comp125
+    </footer>
+    <script src="assignment02.js">
+    </script>
+</body>

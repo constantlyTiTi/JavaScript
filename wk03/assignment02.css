@@ -1,0 +1,134 @@
+.bodyClass
+{
+    background-image: url(image/bodyBackground.jpg);
+    background-size: 100%;
+    /* opacity: 0.5; */
+    /* filter: alpha(opacity=50) */
+}
+.bodyTrans
+{
+    background-color: rgba(245, 245, 245, 0.904);
+    height: 1200px;
+}
+.subBodyClass
+{
+    width:980px;
+    height:1000px;
+    margin-left: auto;
+    margin-right:auto;
+    font-size: 1.1em;
+    padding-top: 20px;
+    background-color: rgba(250, 240, 235, 0.99);
+    margin-top: 3px;
+    border-radius: 20px 20px;
+    padding-left:20px;
+    box-shadow: 3px 3px 3px gray;
+    border-style: outset;
+}
+.HeadDivClass
+{
+    height:80px;
+    padding-top:30px;
+    text-align: center;
+    font-size:1.6em;
+    background-color: rgba(250, 240, 235, 0.90);
+    text-shadow: 1px 1px 15px yellow;
+    box-shadow: 0px 5px 5px gray;
+}
+.QuestionDiv
+{
+    height:50px;
+    padding-top: 30px;
+}
+.headbackgroundDivClass
+{
+    background-image: url(image/math-2.jpeg);
+    background-attachment: fixed;
+}
+.bodyClass
+{
+    font-family: Verdana;
+}
+.clickDivClass
+{
+    height:30px;
+    width: 300px;
+    text-align: center;
+    padding-top: 10px;
+    background-color:rgb(219, 241, 193);
+    border-radius: 20px 20px 20px 20px;
+    border:1px;
+    border-color: azure;
+    box-shadow: 2px 2px 2px gray;
+    position: absolute;
+    bottom: 10px;
+    margin-left:30px;
+}
+.tableShowDivClass
+{
+    padding-top:20px;
+    border-style: inset;
+    border-color: white;
+    height:500px;
+    width: 890px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+.TableShowText
+{
+    font-size: 0.8em;
+    padding-top:20px;
+}
+.clickDivClass:hover
+{
+    background-color:rgb(159, 177, 139);
+}
+.clickDivClass:active
+{
+    background-color:rgb(203, 218, 140);
+}
+.tableSpan
+{
+    width:420px;
+    height:300px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    padding-left: 30px;
+}
+.tableSpan:hover
+{
+    background-color: bisque;
+    box-shadow: 2px 2px 2px gray;
+    border:20px;
+}
+.subUpperDiv
+{
+    height:310px;
+    width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer{
+    background-color: black;
+    color: white;
+    font-size: 1.1em;
+    height: 60px;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+tr
+{
+    border:1px;
+    border-color: darkgray;
+}
+thead
+{
+    font-weight:bold;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: dimgrey; 
+    color: white;
+}
