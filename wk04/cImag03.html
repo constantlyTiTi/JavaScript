@@ -8,7 +8,14 @@
 <div>
     <img src="image/img-03-preset-1.jpg">
 </div>
-<div id="newWindowAddFav">
-    Click to add Favourite
+<button id="newWindowAddFav" onclick="handleClick()">
+        Click to add Favourite and close the window
+</button>
 </div>
+<script>
+    function handleClick(){
+        window.opener.postMessage('cImag3', '*');
+        window.close();
+    }
+</script>
 </body>

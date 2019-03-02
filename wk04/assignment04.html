@@ -10,31 +10,48 @@
 <script src="assignment04.js"></script>
 </head>
 <body class="bodyClass" onload="addEventAddFav()">
-<header class="headerClass">
-    Assignment 04-Photo Slider
-</header>
 <div class="subBody">
     <div class="divAfterBody">
-
+        <p class=divHeaderText> Image Gallery - Assignment04</p>
     </div>
-
+    <div class="introdcutionClass">
+        Click Heart to Add Favourite or add Favourite by Zoomed page
+    </div>
     <div id="imgRightShowContainer" class="imgRightShowContainerClass">
         <div id="imageContainer" class="imageContainerClass">
             <!-- <div id="imageSubContainer" class="imageSubContainerClass"> -->
                 <span id="cImag1" class="cImagSpan">
-                    <img class="cImagClass"src="image/img-01-preset-01.jpg">
+                    <img class="cImagClass"src="image/img-01-preset-01.jpg" alt="img">
+                    <span id="cImag1-canvas-span" class="cImagShowClass" >
+                        <canvas id="cImag1-canvas" width="30" height="30"></canvas>
+                    </span>
                 </span>
                 <span id="cImag2" class="cImagSpan">
-                    <img class="cImagClass"src="image/img-02-preset-2.jpg">
+                    <img class="cImagClass"src="image/img-02-preset-2.jpg" alt="img">
+                    <span id="cImag2-canvas-span" class="cImagShowClass">
+                        <canvas id="cImag2-canvas" width="30" height="30"></canvas>
+                    </span>
                 </span>
                 <span id="cImag3" class="cImagSpan">
-                    <img class="cImagClass"src="image/img-03-preset-1.jpg">
+                    <img class="cImagClass"src="image/img-03-preset-1.jpg" alt="img">
+                    <span id="cImag3-canvas-span" class="cImagShowClass">
+                        <canvas id="cImag3-canvas" width="30" height="30"></canvas>
+                    </span>
                 </span>
                 <span id="cImag4" class="cImagSpan">
-                    <img class="cImagClass"src="image/img-04-preset-4.jpg">
+                    <img class="cImagClass"src="image/img-04-preset-4.jpg" alt="img">
+                    <span id="cImag4-canvas-span"class="cImagShowClass">
+                        <canvas id="cImag4-canvas" width="30" height="30"></canvas>
+                    </span>
                 </span>    
                 <span id="cImag5" class="cImagSpan">
-                    <img class="cImagClass"src="image/img-05-preset-05.jpg">
+                    <img class="cImagClass"src="image/img-05-preset-05.jpg" alt="img">
+                    <span id="cImag5-canvas-span"class="cImagShowClass">
+                        <canvas id="cImag5-canvas" width="30" height="30"></canvas>
+                    </span>
+                </span>
+                <span id="zoomImgNoteId" class="zoomImagNote" onclick="openNewWindow()">
+                        Click here to find zoomed image
                 </span>
             <!-- </div> -->
             <span id="buttonBelow" onclick="imageDisplayClick(-1)" class="buttonImg buttonBelowClass">&#10094;</span>  
@@ -42,25 +59,25 @@
         </div>
         <div id="imgBelowContainer" class="imgBelowContainerClass">
                 <span id="cImag1-Below" class="cImagSpanBelow">
-                    <img class="cImagClassBelow"src="image/img-01-preset-01.jpg">
+                    <img class="cImagClassBelow"src="image/img-01-preset-01.jpg" alt="img">
                 </span>
                 <span id="cImag2-Below" class="cImagSpanBelow">
-                    <img class="cImagClassBelow"src="image/img-02-preset-2.jpg">
+                    <img class="cImagClassBelow"src="image/img-02-preset-2.jpg" alt="img">
                 </span>
                 <span id="cImag3-Below" class="cImagSpanBelow">
-                    <img class="cImagClassBelow"src="image/img-03-preset-1.jpg">
+                    <img class="cImagClassBelow"src="image/img-03-preset-1.jpg" alt="img">
                 </span>
                 <span id="cImag4-Below" class="cImagSpanBelow">
-                    <img class="cImagClassBelow"src="image/img-04-preset-4.jpg">
+                    <img class="cImagClassBelow"src="image/img-04-preset-4.jpg" alt="img">
                 </span>    
                 <span id="cImag5-Below" class="cImagSpanBelow">
-                    <img class="cImagClassBelow"src="image/img-05-preset-05.jpg">
+                    <img class="cImagClassBelow"src="image/img-05-preset-05.jpg" alt="img">
                 </span>
         </div>
     </div>
     <div id="MyFavBan" class="MyFavBanClass">
         <div id="MyFavImg" class="MyFavImgClass">
-            My Favourite Image
+            My Favourite Image & Click to Remove
         </div>
         <div id="favImgBan" class="favImgBanClass">
 
@@ -68,10 +85,7 @@
     </div>
 
 </div>
-<script>
-
-</script>
-<footer>
+<footer class="footerClass">
     Comp125 - Assginment 04 &copy; Ting Li
 </footer>
 

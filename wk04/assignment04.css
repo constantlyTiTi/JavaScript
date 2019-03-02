@@ -1,9 +1,16 @@
 .subBody
 {
-    width: 1000px;
-    height: 800px;
+    width: auto;
+    height: 930px;
     margin-left: auto;
     margin-right: auto;
+    background-color: black;
+}
+.divHeaderText
+{
+    color: white;
+    font-size: 2em;
+    text-shadow: 2px 2px 15px #f5efef;
 }
 .cImagSpanBelow
 {
@@ -48,8 +55,8 @@
 }
 .imgRightShowContainerClass
 {
-    height:600px;
-    width: 950px;
+    height:500px;
+    width: auto;
     display: block;
     background-color:black;
     padding-top: 10px;
@@ -59,19 +66,25 @@
 .cImagShowClass
 {
     z-index: 3;
-    display: inline-block;
+    /* display: inline-block; */
     margin-left: 220px;
-    /* background-color: blue; */
-    height:302px;
-    width:500px; 
+    /* background-color:  rgba(165, 161, 161, 0.377); */
+    /* box-shadow: 2px 1px 1px 1px; */
+    height:35px;
+    width:60px; 
     position: absolute; 
+    top:10px;
+    right:0px;
 }
 .divAfterBody
 {
-    height: 100px;
+    height: 80px;
     width: 500px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+    padding-top: 10px;
+    display: block;
 }
 .cImagClass
 {
@@ -85,6 +98,7 @@
     width:500px; 
     /* display: none;  */
     position: absolute;
+    margin-top: 35px;
 }
 .buttonImg
 {
@@ -100,6 +114,10 @@
 .buttonBelowClass
 {
     left: 0px;
+}
+.buttonImg:hover
+{
+    cursor: pointer;
 }
 .buttonRightClass
 {
@@ -118,17 +136,22 @@
 .MyFavImgClass
 {
     height:50px;
+    color: white;
 }
 .favImgBanClass
 {
     padding-left: 10px;
     padding-right: 10px;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     width: 900px;
     height: 200px;
-    background-color: blanchedalmond;
+    background-color: rgba(255, 235, 205, 0.322);
     margin-left: auto;
     margin-right: auto;
+}
+.favImgBanClass:hover
+{
+    background-color: blanchedalmond;
 }
 .addFavSpanClass
 {
@@ -147,7 +170,7 @@
     z-index: 2;
     display: inline-block;
     margin-left: 220px;
-    box-shadow: 0 0 30px 2px grey;
+    box-shadow: 0px 15px 30px 5px grey;
 }
 .addOnloadStyleZDexOneLeft
 {
@@ -174,4 +197,58 @@
 .addOnloadDislay
 {
     display: none;
+}
+.canvaClass
+{
+    width: 50;
+    height: 50;
+    display: inline-block;
+    right:0;
+}
+.addHearDisplaynone
+{
+    display: none;
+}
+.zoomImagNote
+{
+    position: absolute;
+    right:380px;
+    color:whitesmoke;
+    top:150px;
+    z-index: 3; 
+}
+.zoomImagNote:hover
+{
+    display: block;
+    background-color: rgba(0, 0, 139, 0.534);
+    cursor: pointer;
+}
+.addZoomNoteOnload
+{
+    display: none;
+    background-color: rgba(0, 0, 139, 0.404);
+}
+.addZoomNoteShow
+{
+    display: block;
+}
+.footerClass
+{
+    background-color: gray;
+    height: 50px;
+    padding-top: 20px;
+    text-align: center;
+}
+.cImagShowClass:hover
+{
+    display: block;
+}
+.introdcutionClass
+{
+    color: white;
+    height: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
 }
