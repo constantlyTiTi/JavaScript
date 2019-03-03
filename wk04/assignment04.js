@@ -29,6 +29,8 @@ function addEventAddFav()
         imageArray[i].classList.add("addOnloadDislay");
         drawHeart(getCanvasId);
         HeartDisplayOnload(getCanvasSpanId);
+        // heartDisplayOnHover();
+        
     }
     onloadImgShow();
     midAddFev();
@@ -63,19 +65,27 @@ function addImgFav()
     let copyNode=item.cloneNode(true);
    // let FavBanChildNode=favBan.children;
    // let FavNodeNum=favBan.childElementCount;
-    copyNode.id=idGet+"-copy";
-    copyNode.classList.remove("cImagSpan");
-    copyNode.classList.add("addFavSpanClass");
-    copyNode.classList.remove("addOnloadStyleZDexTwo");
-    let checkResult=checkDuplication(favBan,copyNode);
-    addFunctionToSingle(checkResult,copyNode,favBan);
+    if (favBan.childElementCount>4)
+    {
+        window.alert("Your favourite images are more than 5, please delete one")
+    }
+    else
+    {
+        copyNode.id=idGet+"-copy";
+        copyNode.classList.remove("cImagSpan");
+        copyNode.classList.add("addFavSpanClass");
+        copyNode.classList.remove("addOnloadStyleZDexTwo");
+        let checkResult=checkDuplication(favBan,copyNode);
+        addFunctionToSingle(checkResult,copyNode,favBan);
 
-    let ZDexTwoElements=document.getElementsByClassName("addOnloadStyleZDexTwo");
-    let ParentNodeId=ZDexTwoElements[0].getAttribute("id");
-    let ParentNode=document.getElementById(ParentNodeId);
-    let childNodeList=ParentNode.querySelector("canvas");
-    let canvasNodeId=childNodeList.getAttribute("id");
-    fillHeart(canvasNodeId);
+        let ZDexTwoElements=document.getElementsByClassName("addOnloadStyleZDexTwo");
+        let ParentNodeId=ZDexTwoElements[0].getAttribute("id");
+        let ParentNode=document.getElementById(ParentNodeId);
+        let childNodeList=ParentNode.querySelector("canvas");
+        let canvasNodeId=childNodeList.getAttribute("id");
+        fillHeart(canvasNodeId);
+    }
+
 
 }
 function removeImgFav(id)
@@ -126,11 +136,17 @@ function belowChangeAbove(id)
     {
         slideIndex=4;
     }
-    else
+    else if (id=="cImag5-Below")
     {
         slideIndex=5;
     }
+    else if (id=="cImag6-Below")
+    {
+        slideIndex=6;
+    }
     backImgDisplayMove(slideIndex);
+    addFavandShowHert();
+    
 }
 function belowOpChangeWithAbove(slideIndex)
 {
@@ -148,7 +164,7 @@ function backImgDisplayMove(slideIndex)
             imageArray[i].classList.remove("addOnloadStyleZDexOneRight");
     }
 
-    if (slideIndex>1&&slideIndex<5)
+    if (slideIndex>1&&slideIndex<6)
     {
         imageArray[slideIndex-1].classList.add("addOnloadStyleZDexTwo");
         imageArray[slideIndex-2].classList.add("addOnloadStyleZDexOneLeft");
@@ -157,7 +173,7 @@ function backImgDisplayMove(slideIndex)
         imageArray[slideIndex-2].classList.remove("addOnloadDislay");
         imageArray[slideIndex].classList.remove("addOnloadDislay");
     }
-    else if (slideIndex==5)
+    else if (slideIndex==6)
     {
         imageArray[slideIndex-1].classList.add("addOnloadStyleZDexTwo");
         imageArray[slideIndex-2].classList.add("addOnloadStyleZDexOneLeft");
@@ -169,10 +185,10 @@ function backImgDisplayMove(slideIndex)
     else
     {
         imageArray[slideIndex-1].classList.add("addOnloadStyleZDexTwo");
-        imageArray[4].classList.add("addOnloadStyleZDexOneLeft");
+        imageArray[5].classList.add("addOnloadStyleZDexOneLeft");
         imageArray[slideIndex].classList.add("addOnloadStyleZDexOneRight");
         imageArray[slideIndex-1].classList.remove("addOnloadDislay");
-        imageArray[4].classList.remove("addOnloadDislay");
+        imageArray[5].classList.remove("addOnloadDislay");
         imageArray[slideIndex].classList.remove("addOnloadDislay");
     }
     
@@ -188,26 +204,13 @@ function onloadImgShow()
 }
 function midAddFev()
 {
-    let midImgShowDiv=getMidNode();
+    // let midImgShowDiv=getMidNode();
 //    midImgShowDiv.addEventListener("click",addImgFav)
-    let id =midImgShowDiv.id;
-    let midCavSpanId=id+"-canvas-span";
+    // let id =midImgShowDiv.id;
+    // let midCavSpanId=id+"-canvas-span";
     // midImgShowDiv.addEventListener("click",function(){openNewWidow(id)});
-    let midId=midImgShowDiv.getAttribute("id");
-    let canvasMidNode=getMidCanvasNode(midId);
-    if (window.addEventListener)
-    {
-        canvasMidNode.addEventListener("click",addImgFav);
-        midImgShowDiv.addEventListener("mouseover",heartDisplayOnHover);
-        midImgShowDiv.addEventListener("mouseout",HeartDisplayMouseOut);
-    }
-    else if(window.attachEvent)
-    {
-        canvasMidNode.attachEvent("click",addImgFav);
-        midImgShowDiv.attachEvent("mouseover",heartDisplayOnHover);
-        midImgShowDiv.attachEvent("mouseout",HeartDisplayMouseOut);
-    }
 
+    addFavandShowHert();
 }
 function midAddFevFunctionRemove()
 {
@@ -250,6 +253,7 @@ function openNewWindow()
     else if (id=="cImag3"){newWindowHref="cImag03.html";}
     else if (id=="cImag4"){newWindowHref="cImag04.html";}
     else if (id=="cImag5"){newWindowHref="cImag05.html";}
+    else if (id=="cImag6"){newWindowHref="cImag06.html";}
     if(windowObjectReference == null || windowObjectReference.closed){
         windowObjectReference = window.open(newWindowHref,
         "BestViewer", "resizable,scrollbars,status");
@@ -388,5 +392,25 @@ else if (window.attachEvent)
 {
     window.attachEvent("message", receiveMessage, false);
 }
-
+function addFavandShowHert()
+{
+ //   let midId=midImgShowDiv.getAttribute("id");
+    
+    let midImgShowDiv=getMidNode();
+    //    midImgShowDiv.addEventListener("click",addImgFav)
+    let id =midImgShowDiv.id;
+    let canvasMidNode=getMidCanvasNode(id);
+    if (window.addEventListener)
+    {
+        canvasMidNode.addEventListener("click",addImgFav);
+        midImgShowDiv.addEventListener("mouseover",heartDisplayOnHover);
+        midImgShowDiv.addEventListener("mouseout",HeartDisplayMouseOut);
+    }
+    else if(window.attachEvent)
+    {
+        canvasMidNode.attachEvent("click",addImgFav);
+        midImgShowDiv.attachEvent("mouseover",heartDisplayOnHover);
+        midImgShowDiv.attachEvent("mouseout",HeartDisplayMouseOut);
+    }
+}
 //#endregion

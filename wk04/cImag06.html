@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Image 06
+    </title>
+</head>
+<body>
+<div>
+    <img src="image/img-06-preset-06.jpg">
+</div>
+<button id="newWindowAddFav" onclick="handleClick()">
+        Click to add Favourite and close the window
+</button>
+</div>
+<script>
+    function handleClick(){
+        window.opener.postMessage('cImag6', '*');
+        window.close();
+    }
+</script>
+</body>
